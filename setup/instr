@@ -1,0 +1,23 @@
+#build go executable
+go mod tidy
+go mod vendor
+CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o app .
+
+# build image
+docker build --rm -f setup/dockerfile -t ldap-go:latest .
+
+# run container from image
+docker run -d --restart=always -p 44444:44444 ldap-go
+
+# images
+docker images
+docker image prune
+docker image rm image_id
+
+# containers
+docker ps -a
+docker stop name
+docker rm name
+
+# log location containers when installed from snap repo
+docker logs container_id

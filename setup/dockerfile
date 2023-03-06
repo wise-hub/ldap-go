@@ -1,0 +1,14 @@
+# make sure to build the app with CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o app .
+# start docker build from APP HOME DIRECTORY
+
+FROM scratch
+
+WORKDIR /bin/
+
+COPY /app .
+COPY /server.key .
+COPY /server.pem .
+
+CMD [ "./app" ]
+
+EXPOSE 44444
