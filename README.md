@@ -1,7 +1,7 @@
 # Go LDAP Webservice
 
 ## General Information
-POST https://host:44444/api/ldap-login 
+POST http://host:44444/api/ldap-login 
 
 Request:
 {
@@ -25,5 +25,4 @@ Response Fail:
 
 ## Setup
 1. Follow setup folder instructions
-1. Keep .pem and .key files in the same folder as .exe
-3. Use Postman collection for testing
+2. Use Postman collection for testing

@@ -6,9 +6,7 @@ FROM scratch
 WORKDIR /bin/
 
 COPY /app .
-COPY /server.key .
-COPY /server.pem .
 
 CMD [ "./app" ]
 
-EXPOSE 44444
+EXPOSE 55555

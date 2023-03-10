@@ -20,7 +20,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://127.0.0.1:44444/api/ldap-login",
+					"raw": "http://127.0.0.1:44444/api/ldap-login",
 					"protocol": "https",
 					"host": [
 						"127",
